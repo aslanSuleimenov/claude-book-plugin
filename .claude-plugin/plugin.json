@@ -1,0 +1,36 @@
+{
+  "name": "claude-book-plugin",
+  "version": "0.1.0",
+  "description": "Write books of any genre — fiction and nonfiction. Two modes: from-scratch and adapt (screenplay → prose).",
+  "author": "aslanSuleimenov",
+  "commands": [
+    {"path": "commands/startproject.md"},
+    {"path": "commands/new-chapter.md"},
+    {"path": "commands/convert.md"},
+    {"path": "commands/outline.md"},
+    {"path": "commands/rewrite.md"},
+    {"path": "commands/analyze.md"},
+    {"path": "commands/check.md"},
+    {"path": "commands/state.md"},
+    {"path": "commands/character-sheet.md"},
+    {"path": "commands/continuity.md"},
+    {"path": "commands/research.md"},
+    {"path": "commands/genre-compass.md"},
+    {"path": "commands/style.md"},
+    {"path": "commands/stats.md"},
+    {"path": "commands/compile.md"},
+    {"path": "commands/split.md"},
+    {"path": "commands/renumber.md"},
+    {"path": "commands/delete-chapter.md"},
+    {"path": "commands/type-check.md"}
+  ],
+  "agents": [
+    {"path": "agents/prose-doctor.md"},
+    {"path": "agents/style-validator.md"},
+    {"path": "agents/continuity-reviewer.md"},
+    {"path": "agents/character-checker.md"},
+    {"path": "agents/structure-reviewer.md"},
+    {"path": "agents/character-bible.md"}
+  ],
+  "hooks": "hooks/hooks.json"
+}
