@@ -22,7 +22,8 @@
     {"path": "commands/split.md"},
     {"path": "commands/renumber.md"},
     {"path": "commands/delete-chapter.md"},
-    {"path": "commands/type-check.md"}
+    {"path": "commands/type-check.md"},
+    {"path": "commands/anti-ai.md"}
   ],
   "agents": [
     {"path": "agents/prose-doctor.md"},
@@ -30,7 +31,8 @@
     {"path": "agents/continuity-reviewer.md"},
     {"path": "agents/character-checker.md"},
     {"path": "agents/structure-reviewer.md"},
-    {"path": "agents/character-bible.md"}
+    {"path": "agents/character-bible.md"},
+    {"path": "agents/anti-ai-checker.md"}
   ],
   "hooks": "hooks/hooks.json"
 }
