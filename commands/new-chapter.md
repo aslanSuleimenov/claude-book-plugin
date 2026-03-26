@@ -32,6 +32,22 @@ Write the chapter. Requirements:
 - Genre contracts honored (from genre-mechanics.md)
 - Open threads from situation.md addressed or deliberately carried forward
 
+**Scene structure (3–4 scenes per chapter)**
+- Opening (25–30%) — hook or tension continuation, ground the reader in place and stakes
+- Development (40–50%) — advance plot and character, vary action/dialogue/reflection
+- Climax (15–20%) — highest tension of the chapter
+- Resolution/Hook (10–15%) — land or release, set up next chapter
+
+**Tension curve**
+- Opening: high engagement (7/10) — don't ease in
+- Early middle: 5/10 — context, texture, room to breathe
+- Mid-chapter: 8/10 — conflict escalates
+- Late middle: 6/10 — brief release before the peak
+- Chapter climax: 9/10 — the reason this chapter exists
+- Ending: 8/10 — don't drop tension completely; carry momentum forward
+
+Never put two low-tension scenes back to back. Never end on a 5/10.
+
 ## After writing
 
 1. Save to `chapters/NN_Title.md` (underscores, lowercase, format: `01_the-beginning.md`)

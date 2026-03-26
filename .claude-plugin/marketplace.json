@@ -1,11 +1,17 @@
 {
-  "name": "claude-book-plugin",
-  "display_name": "Book Writer",
-  "tagline": "Write fiction and nonfiction books with genre-aware AI assistance",
-  "description": "A full-featured book writing plugin for Claude Code. Supports two modes: writing original prose from scratch, or adapting screenplay/script scenes into narrative prose. Includes 19 commands, 6 specialized agents, automatic chapter hooks, genre mechanics library, and DOCX export.",
-  "version": "0.1.0",
-  "author": "aslanSuleimenov",
-  "repository": "https://github.com/aslanSuleimenov/claude-book-plugin",
-  "tags": ["writing", "fiction", "nonfiction", "books", "prose"],
-  "categories": ["creative", "writing"]
+  "name": "claude-book-plugin-marketplace",
+  "owner": {
+    "name": "Aslan Suleimenov",
+    "url": "https://github.com/aslanSuleimenov"
+  },
+  "plugins": [
+    {
+      "name": "claude-book-plugin",
+      "description": "Write fiction and nonfiction books — from-scratch and screenplay-to-prose modes, 20 commands, 7 agents, genre mechanics library, DOCX export.",
+      "source": {
+        "source": "github",
+        "repo": "aslanSuleimenov/claude-book-plugin"
+      }
+    }
+  ]
 }
