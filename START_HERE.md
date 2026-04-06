@@ -2,28 +2,29 @@
 
 ## Installation
 
-1. Clone or copy this plugin into your Claude Code plugins directory
-2. Add to your `settings.json`:
-   ```json
-   {
-     "plugins": ["path/to/claude-book-plugin"]
-   }
-   ```
-3. Restart Claude Code
+```bash
+claude plugin install claude-book-plugin@claude-book-plugin-marketplace
+```
+
+Or add marketplace manually in `settings.json`:
+```json
+"extraKnownMarketplaces": {
+  "claude-book-plugin-marketplace": {
+    "source": { "source": "github", "repo": "aslanSuleimenov/claude-book-plugin" }
+  }
+}
+```
 
 ## Starting a new book
 
 1. Create a new empty folder for your book
 2. Open it in Claude Code
-3. Run:
-   ```
-   /startproject
-   ```
-   Claude will ask you for mode, genre, POV, and a logline. It creates all the project structure.
-
-4. Fill in `story/synopsis.md` (your full story from beginning to end)
-5. Run `/outline` to build a chapter plan
-6. Run `/new-chapter 01 Opening` (from-scratch) or `/convert 01` (adapt) to start writing
+3. Run `/startproject` — Claude asks for mode, genre, POV, logline. Creates all project structure.
+4. Fill in `story/synopsis.md` (full story from beginning to end)
+5. Run `/outline` to build chapter plan
+6. Start writing:
+   - from-scratch: `/new-chapter 01 Opening`
+   - adapt mode: `/convert 01`
 
 ## Two modes
 
@@ -41,21 +42,36 @@
 | `/new-chapter NN Title` | Write next chapter (from-scratch) |
 | `/convert NN` | Convert screenplay scene (adapt) |
 | `/outline` | Build chapter-by-chapter plan |
-| `/check` | Full quality check (style, continuity, characters, structure) |
+| `/full-check [NN\|NN-MM]` | Complete 10-agent audit with dashboard |
+| `/check [checker]` | Single targeted checker |
 | `/analyze` | Deep manuscript analysis |
 | `/state NN` | Update world state after chapter |
 | `/stats` | Word count, reading time, chapter breakdown |
 | `/compile` | Export to DOCX |
 | `/type-check` | Diagnose project setup |
 
-## Agents (invoke in conversation)
+## Agents
 
+### Core
 - `prose-doctor` — full manuscript audit
 - `style-validator` — POV/tense/voice consistency
 - `continuity-reviewer` — timeline, geography, knowledge errors
 - `character-checker` — voice and behavior consistency
 - `structure-reviewer` — pacing, acts, arcs, open threads
 - `character-bible` — extract full character list from chapters
+- `story-planner` — plan next 3–5 chapters
+
+### Specialized checkers (used by `/full-check`)
+- `continuity-checker` — plot/character continuity
+- `timeline-checker` — time logic and arithmetic
+- `consistency-checker` — world rules and facts
+- `ooc-checker` — out-of-character behavior
+- `voice-checker` — narrative voice and POV
+- `outline-checker` — adherence to plan
+- `pacing-checker` — scene type balance
+- `prose-checker` — line-level craft
+- `high-point-checker` — satisfaction moment density
+- `reader-pull-checker` — chapter hooks and momentum
 
 ## Requirements
 
