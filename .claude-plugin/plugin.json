@@ -26,7 +26,8 @@
     "./commands/renumber.md",
     "./commands/delete-chapter.md",
     "./commands/type-check.md",
-    "./commands/anti-ai.md"
+    "./commands/anti-ai.md",
+    "./commands/full-check.md"
   ],
   "agents": [
     "./agents/prose-doctor.md",

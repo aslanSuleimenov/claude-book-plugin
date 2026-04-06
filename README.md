@@ -8,8 +8,9 @@ A Claude Code plugin for writing books of any genre — fiction and nonfiction.
 
 ## Features
 
-- **19 slash commands** — from project setup to DOCX export
-- **6 specialized agents** — prose audit, style validation, continuity, character, structure, character bible
+- **20 slash commands** — from project setup to DOCX export
+- **18 specialized agents** — 7 core agents + 10 specialized checkers + 1 planner
+- **`/full-check`** — complete 10-agent manuscript audit with prioritized dashboard
 - **Automatic hooks** — AI writing tell detection after every chapter write; session log on stop
 - **Genre craft library** — structural contracts, voice notes, reference books for 10+ genres
 - **AI-pattern prevention** — canonical list of AI writing tells, checked at every step
@@ -44,7 +45,8 @@ Follow the prompts. Then:
 | `/outline` | Build chapter-by-chapter plan |
 | `/rewrite NN notes` | Rewrite chapter with notes |
 | `/analyze [NN]` | Full manuscript analysis or single chapter |
-| `/check [type]` | Quality check: style / continuity / characters / structure |
+| `/full-check [NN\|NN-MM]` | Complete 10-agent audit with dashboard |
+| `/check [type]` | Targeted check: continuity-checker / ooc-checker / prose-checker / etc. |
 | `/state NN` | Update world state after chapter |
 | `/character-sheet Name` | Generate character card |
 | `/continuity [range]` | Find continuity errors |
@@ -62,6 +64,8 @@ Follow the prompts. Then:
 
 ## Agents
 
+### Core agents
+
 | Agent | Description |
 |-------|-------------|
 | `prose-doctor` | Full manuscript audit |
@@ -70,6 +74,40 @@ Follow the prompts. Then:
 | `character-checker` | Voice and behavior consistency |
 | `structure-reviewer` | Pacing, acts, arcs, open threads |
 | `character-bible` | Extract character list from chapters |
+| `story-planner` | Next 3–5 chapter plan based on current progress |
+
+### Specialized checkers (used by `/full-check` and `/check`)
+
+| # | Agent | What it checks |
+|----|-------|---------------|
+| 1 | `continuity-checker` | Plot and character continuity across chapters |
+| 2 | `timeline-checker` | Chronological consistency, travel times, time arithmetic |
+| 3 | `consistency-checker` | World rules, setting facts, internal contradictions |
+| 4 | `ooc-checker` | Out-of-character behavior, speech pattern violations |
+| 5 | `voice-checker` | Narrative voice, POV adherence, character voice distinction |
+| 6 | `outline-checker` | Adherence to story/plan.md structure |
+| 7 | `pacing-checker` | Scene type balance (action/emotion/world-building) |
+| 8 | `prose-checker` | Line-level craft: pacing, show vs tell, dialogue subtext |
+| 9 | `high-point-checker` | Satisfaction moment density and quality |
+| 10 | `reader-pull-checker` | Chapter hooks, micro-payoffs, reading momentum |
+
+---
+
+## `/full-check` — Complete manuscript audit
+
+Runs all 10 specialized checkers in dependency order:
+
+```
+Phase 1 — Foundation:  continuity + timeline + consistency
+Phase 2 — Characters:  ooc + voice
+Phase 3 — Structure:   outline + pacing
+Phase 4 — Reader:      prose + high-point + reader-pull
+Phase 5 — Synthesis:   consolidated dashboard
+```
+
+Output: `analytics/full-check-dashboard.md` + 10 individual reports
+
+Use for: milestone reviews, before major revision, before submitting.
 
 ---
 
@@ -92,7 +130,7 @@ my-book/
 ├── state/current/
 │   ├── situation.md
 │   └── characters.md
-├── analytics/
+├── analytics/             ← full-check reports, research
 └── versions/              ← compiled DOCX files
 ```
 
