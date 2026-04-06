@@ -35,6 +35,16 @@
     "./agents/character-checker.md",
     "./agents/structure-reviewer.md",
     "./agents/character-bible.md",
-    "./agents/anti-ai-checker.md"
+    "./agents/anti-ai-checker.md",
+    "./agents/continuity-checker.md",
+    "./agents/outline-checker.md",
+    "./agents/prose-checker.md",
+    "./agents/timeline-checker.md",
+    "./agents/voice-checker.md",
+    "./agents/consistency-checker.md",
+    "./agents/ooc-checker.md",
+    "./agents/pacing-checker.md",
+    "./agents/high-point-checker.md",
+    "./agents/reader-pull-checker.md"
   ]
 }
