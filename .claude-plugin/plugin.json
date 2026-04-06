@@ -2,7 +2,10 @@
   "name": "claude-book-plugin",
   "version": "0.1.0",
   "description": "Write books of any genre — fiction and nonfiction. Two modes: from-scratch and adapt (screenplay → prose).",
-  "author": "aslanSuleimenov",
+  "author": {
+    "name": "Aslan Suleimenov",
+    "url": "https://github.com/aslanSuleimenov"
+  },
   "commands": [
     {"path": "commands/startproject.md"},
     {"path": "commands/new-chapter.md"},
@@ -34,5 +37,7 @@
     {"path": "agents/character-bible.md"},
     {"path": "agents/anti-ai-checker.md"}
   ],
-  "hooks": "hooks/hooks.json"
+  "hooks": [
+    {"path": "hooks/hooks.json"}
+  ]
 }
